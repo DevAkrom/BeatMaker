@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Beat Maker</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dosis:wght@300;400;500;600;700;800&family=Inter+Tight:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700&family=Koulen&family=Lato:ital,wght@1,400;1,700&family=Mulish:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700&family=Noto+Serif+HK:wght@400;600;700;900&family=Oleo+Script+Swash+Caps:wght@400;700&family=Open+Sans:ital,wght@0,300;1,300&family=Pacifico&family=Poppins:ital,wght@0,100;0,200;0,300;0,900;1,100;1,200;1,300;1,700;1,900&family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,400;1,700&family=Roboto+Flex:opsz,wght@8..144,400;8..144,500;8..144,600;8..144,700;8..144,800&family=Roboto:ital,wght@0,900;1,300;1,900&family=Rubik:ital,wght@0,400;0,500;1,300;1,400&family=Source+Sans+Pro:ital,wght@0,300;0,900;1,300;1,700&family=Ubuntu:wght@500&family=Water+Brush&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./beatmaker.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+      integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <main>
+      <section>
+        <h2>Kick</h2>
+        <button class="muteBtn muteKick">
+          <i class="fa-solid fa-volume-xmark"></i>
+        </button>
+        <select name="selectKick" id="">
+          <option value="./sounds/kick-classic.wav">Classic Kick</option>
+          <option value="./sounds/kick-heavy.wav">Heavy kick</option>
+          <option value="./sounds/kick-softy.wav">Softy kick</option>
+          <option value="./sounds/kick-808.wav">808 kick</option>
+        </select>
+        <div class="boxes kick-boxes">
+          <div class="divs kicks btn0"></div>
+          <div class="divs kicks btn1"></div>
+          <div class="divs kicks btn2"></div>
+          <div class="divs kicks btn3"></div>
+          <div class="divs kicks btn4"></div>
+          <div class="divs kicks btn5"></div>
+          <div class="divs kicks btn6"></div>
+          <div class="divs kicks btn7"></div>
+        </div>
+      </section>
+
+      <section>
+        <h2>Snare</h2>
+        <button class="muteBtn muteSnare">
+          <i class="fa-solid fa-volume-xmark"></i>
+        </button>
+        <select name="selectSnare" id="">
+          <option value="./sounds/snare-acoustic01.wav">Snare Acoustics</option>
+          <option value="./sounds/snare-vinyl02.wav">Snare Viny</option>
+          <option value="./sounds/snare-808.wav">Snare 808</option>
+        </select>
+        <div class="boxes snare-boxes">
+          <div class="divs snares btn0"></div>
+          <div class="divs snares btn1"></div>
+          <div class="divs snares btn2"></div>
+          <div class="divs snares btn3"></div>
+          <div class="divs snares btn4"></div>
+          <div class="divs snares btn5"></div>
+          <div class="divs snares btn6"></div>
+          <div class="divs snares btn7"></div>
+        </div>
+      </section>
+      <section>
+        <h2>Hihat</h2>
+        <button class="muteBtn muteHihat">
+          <i class="fa-solid fa-volume-xmark"></i>
+        </button>
+        <select name="selectHihat" id="">
+          <option value="./sounds/hihat-808.wav">Hihat 808</option>
+          <option value="./sounds/hihat-acoustic01.wav">Hihat Acoustics</option>
+        </select>
+        <div class="boxes hihat-boxes">
+          <div class="divs hihats btn0"></div>
+          <div class="divs hihats btn1"></div>
+          <div class="divs hihats btn2"></div>
+          <div class="divs hihats btn3"></div>
+          <div class="divs hihats btn4"></div>
+          <div class="divs hihats btn5"></div>
+          <div class="divs hihats btn6"></div>
+          <div class="divs hihats btn7"></div>
+        </div>
+      </section>
+      <button class="playBtn">Play</button>
+      <input class="tempo" type="range" min="20" max="300" />
+      <p class="last">Tempo: <span class="tempoIndicator"></span></p>
+      <audio src="./sounds/kick-classic.wav" class="kickIt"></audio>
+      <audio src="./sounds/hihat-acoustic01.wav" class="hihatAudio"></audio>
+      <audio src="./sounds/snare-acoustic01.wav" class="snareAudio"></audio>
+    </main>
+    <script src="./beatmaker.js"></script>
+  </body>
+</html>
